@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Get Reddit User's Last Comment</title>
+    <link rel="stylesheet" href="redditGetComment.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+    <div id="main-container" data-ng-app="app" data-ng-controller="controller">
+        <div id="background"></div>
+        <section>
+            <header class="underline">
+                <h1>Get a Reddit User's Latest Comment</h1>
+            </header>
+            <div class="inline-b">
+                <label>Reddit Username: </label>
+                <input data-ng-model="username" data-ng-keypress="checkKey($event)" />
+            </div>
+            <button ng-click="getComment($event)">Get Comment</button>
+        </section>
+        <section>
+            <header class="underline">Latest Comment:</header>
+            <output>{{ comment }}</output>
+        </section>
+        <footer>&copy; Chase Allen 2017</footer>
+    </div>
+</body>
+
+<script src="redditGetComment.js"></script>
+
+</html>
