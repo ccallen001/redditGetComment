@@ -14,7 +14,9 @@ angular.module(`app`, []).controller(`controller`, ($scope, $timeout) => {
             s.comment = `Please try another one.`;
             $timeout(() => {
                 s.username = null;
-                $timeout(() => { username.focus(); }, 300);
+                $timeout(() => {
+                    username.focus();
+                }, 300);
             }, 200);
         }, 1000);
     }
@@ -23,7 +25,9 @@ angular.module(`app`, []).controller(`controller`, ($scope, $timeout) => {
     s.getComment = ev => {
         if (!s.username) {
             s.comment = `Plese input a username.`;
-            $timeout(() => { username.focus(); }, 0);
+            $timeout(() => {
+                username.focus();
+            }, 0);
             console.log(s.username);
         } else if ((/[^a-zA-Z0-9_-]/gm).test(s.username)) {
             s.comment = `Hmm... That doesn't look like a valid username.`;
