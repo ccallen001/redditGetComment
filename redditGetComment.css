@@ -67,7 +67,7 @@ body {
     font-size: 40px;
     /*letter-spacing: 1px;*/
     text-shadow: var(--text-shadow);
-    transform: scaleX(1.25) scaleY(2.5);
+    transform: scaleX(1.33) scaleY(2.5);
 }
 
 #main-container header,
@@ -116,7 +116,7 @@ body {
 
 #main-container footer {
     position: absolute;
-    bottom: -16px;
+    bottom: 78px;
     width: 100%;
     padding: 20px;
     background-color: #222;

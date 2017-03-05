@@ -15,8 +15,8 @@ angular.module(`app`, []).controller(`controller`, ($scope, $timeout) => {
             $timeout(() => {
                 s.username = null;
                 $timeout(() => { username.focus(); }, 300);
-            }, 333);
-        }, 2000);
+            }, 200);
+        }, 1000);
     }
 
     //http request to retrieve data
@@ -43,13 +43,13 @@ angular.module(`app`, []).controller(`controller`, ($scope, $timeout) => {
                 }
             } catch (err) {
                 console.log(err);
-                s.comment = `Whoops! There was an error. :( Please try again.`;
+                s.comment = `Whoops! There was an error. :(`;
                 s.tryAnother();
             }
         }
 
         if (s.comment == "" || s.comment == null || s.comment == undefined) {
-            s.comment = `Whoops! There was an error. :( Please try again.`;
+            s.comment = `Whoops! There was an error. :(`;
             s.tryAnother();
         }
     }
